@@ -17,37 +17,41 @@
 
 using System;
 
-using System;
-
 class Program
 {
     static void Main()
     {
-        double[] numbers = new double[5];
         Console.WriteLine("Введіть 5 чисел:");
 
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            Console.Write($"Число {i + 1}: ");
-            numbers[i] = Convert.ToDouble(Console.ReadLine());
-        }
+        Console.Write("Число 1: ");
+        double a = Convert.ToDouble(Console.ReadLine());
 
-        double sum = 0;
-        double product = 1;
-        double max = numbers[0];
-        double min = numbers[0];
+        Console.Write("Число 2: ");
+        double b = Convert.ToDouble(Console.ReadLine());
 
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            sum += numbers[i];
-            product *= numbers[i];
+        Console.Write("Число 3: ");
+        double c = Convert.ToDouble(Console.ReadLine());
 
-            if (numbers[i] > max)
-                max = numbers[i];
+        Console.Write("Число 4: ");
+        double d = Convert.ToDouble(Console.ReadLine());
 
-            if (numbers[i] < min)
-                min = numbers[i];
-        }
+        Console.Write("Число 5: ");
+        double e = Convert.ToDouble(Console.ReadLine());
+
+        double sum = a + b + c + d + e;
+        double product = a * b * c * d * e;
+
+        double max = a;
+        if (b > max) max = b;
+        if (c > max) max = c;
+        if (d > max) max = d;
+        if (e > max) max = e;
+
+        double min = a;
+        if (b < min) min = b;
+        if (c < min) min = c;
+        if (d < min) min = d;
+        if (e < min) min = e;
 
         Console.WriteLine("\nРезультати обчислень:");
         Console.WriteLine($"Сума чисел: {sum}");
