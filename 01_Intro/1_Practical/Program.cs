@@ -163,7 +163,7 @@ namespace _1_Practical
 //            }
 //            else
 //            {
-//                Console.WriteLine("Помилка: потрібно, щоб A і B були додатними числами, та A < B.");
+//                Console.WriteLine("A і B мають бути додатними числами, та A < B.");
 //            }
         
 //        }
