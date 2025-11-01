@@ -65,34 +65,107 @@
 
 // Task 3
 
+//using System;
+
+//namespace _1_Practical
+
+//    {
+//    class Program
+//    {
+//        static void Main()
+//        {
+//            Console.Write("Введіть шестизначне число: ");
+//            string str  = Console.ReadLine()!;
+//            Console.WriteLine(str);
+
+//            if (str.Length != 6 || !int.TryParse(str, out _))
+//            {
+//                Console.WriteLine("Помилка: введене значення не є шестизначним числом.");
+//                return;
+//            }
+//            else
+//            {
+//                char[] chars = str.ToCharArray();
+//                Array.Reverse(chars);
+//                string reversed = new string(chars);
+
+//                Console.WriteLine($"Перевернуте число: {reversed}");
+
+//            }
+
+//        }
+//    }
+//}
+
+// Task 4
+
 using System;
 
 namespace _1_Practical
-
-    {
-    class Program
+{
+    class Program 
     {
         static void Main()
         {
-            Console.Write("Введіть шестизначне число: ");
-            string str  = Console.ReadLine()!;
-            Console.WriteLine(str);
+            Console.Write("Введіть початок діапазону: ");
+            int start = int.Parse(Console.ReadLine()!);
 
-            if (str.Length != 6 || !int.TryParse(str, out _))
+            Console.Write("Введіть кінець діапазону: ");
+            int end = int.Parse(Console.ReadLine()!);
+
+            Console.WriteLine($"\nЧисла Фібоначчі в діапазоні від {start} до {end}:");
+
+            int a = 0;
+            int b = 1;
+
+            while (a <= end)
             {
-                Console.WriteLine("Помилка: введене значення не є шестизначним числом.");
-                return;
-            }
-            else
-            {
-                char[] chars = str.ToCharArray();
-                Array.Reverse(chars);
-                string reversed = new string(chars);
+                if (a >= start)
+                {
+                    Console.WriteLine(a + " ");
+                }
 
-                Console.WriteLine($"Перевернуте число: {reversed}");
-
+                int next = a + b;
+                a = b;
+                b = next;
             }
-         
         }
     }
 }
+
+// Task 5
+
+//using System;
+
+//namespace _1_Practical
+
+//{
+//    class Program
+//    {
+//        static void Main()
+//        {
+//            Console.Write("Введіть число А: ");
+//            int a = int.Parse(Console.ReadLine()!);
+
+//            Console.Write("Введіть число В: ");
+//            int b = int.Parse(Console.ReadLine()!);
+
+//            if (a < b && a > 0 && b > 0)
+//            {
+//                for (int i = a; i <= b; i++)
+//                {
+//                    for (int j = 0; j < i; j++)
+//                    {
+//                        Console.Write(i + " ");
+//                    }
+//                    Console.WriteLine();
+//                }
+//            }
+//            else
+//            {
+//                Console.WriteLine("Помилка: потрібно, щоб A і B були додатними числами, та A < B.");
+//            }
+        
+//        }
+//    }
+//}
