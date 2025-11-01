@@ -169,3 +169,44 @@ namespace _1_Practical
 //        }
 //    }
 //}
+
+// Task 6
+
+using System;
+
+namespace _1_Practical
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введіть довжину лінії: ");
+            int length = int.Parse(Console.ReadLine()!);
+            Console.Write("Введіть символ заповнювач: ");
+            char symbol = Console.ReadKey().KeyChar;
+            Console.Write("\nВведіть напрямок лінії (горизонтальна, вертикальна): ");
+            string direction = Console.ReadLine()!.ToLower();
+            Console.WriteLine($"\nРезультат:");
+
+            if (direction == "горизонтальна")
+            {
+                for (int i = 0; i < length; i++)
+                {
+                    Console.Write(symbol);
+                }
+                Console.WriteLine();
+            }
+            else if (direction == "вертикальна")
+            {
+                for (int i = 0; i < length; i++)
+                {
+                    Console.WriteLine(symbol);
+                }
+            }
+            else
+            {
+                Console.WriteLine("Невірно вказано напрямок!");
+            }
+        }
+    }
+}
